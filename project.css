@@ -1,0 +1,140 @@
+.login-font {
+    display: grid;
+    align-items: center;
+    font-size: 25px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.box {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* To make sure the image stays behind other elements */
+    object-fit: cover; /* To ensure the image covers the entire container */
+    filter: blur(5px);
+   }
+.form-box {
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.form-box header {
+    font-weight: 600px;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.form-box form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.btn {
+    height: 35px;
+    background: rgba(76, 68, 182, 0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.signup-returntoline {
+    display: inline-block;
+}
+
+.error-message {
+    color: rgba(255, 0, 0, 0.491);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.shadow-button-set {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5vmin;
+  
+  & > li {
+    display: inline-flex;
+    background: black;
+    
+    &:is(:hover, :focus-within) > button:not(:active) {
+      --distance: -10px;
+    }
+  }
+  
+  & button {
+    appearance: none;
+    outline: none;
+    font-size: 5vmin;
+    border: 3px solid black;
+    background: white;
+    
+    --distance: 0;
+    transform: translateX(var(--distance)) translateY(var(--distance));
+    
+    @media (prefers-reduced-motion: no-preference) {
+      will-change: transform;
+      transition: transform .2s ease ;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+  
+  display: grid;
+  place-content: center;
+}
